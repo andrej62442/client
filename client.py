@@ -24,7 +24,7 @@ def sending_thread(clientSocket):
     print("Also try typing something\n")
     try:
         while True:
-            clientSocket.send(input(), 0)
+            clientSocket.send(input(f"{clientSocket.username}: "), 0)
     finally:
         clientSocket.close()
         exit(-1)
